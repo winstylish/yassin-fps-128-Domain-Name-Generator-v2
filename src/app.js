@@ -1,15 +1,16 @@
-const who   = ["El perro", "Mi abuela", "El cartero", "Mi canario"]; 
-const action = ["se comió", "orinó", "aplastó", "rompió"]; 
-const what  = ["mi tarea", "mi móvil", "el coche", "mi portátil"]; 
-const when  = ["antes de clase", "mientras dormía", "cuando hacía ejercicio", "durante el almuerzo", "mientras rezaba"]; 
+let pronoun = ['the', 'our'];
+let adj = ['great', 'big'];
+let noun = ['jogger', 'racoon'];
+let exten = ['.com', '.net', '.us', '.io', '.es'];
 
-function rand(arr){ 
-  return arr[Math.floor(Math.random()*arr.length)]; 
-}
-function generarExcusa(){ 
-  return `${rand(who)} ${rand(action)} ${rand(what)} ${rand(when)}.`; 
-}
+for (let i = 0; i < pronoun.length; i++) {
+    for (let j = 0; j < adj.length; j++) {
+        for (let k = 0; k < noun.length; k++) {
+            for (let l = 0; l < exten.length; l++) {
+                console.log(pronoun[i] + adj[j] + noun[k] + exten[l]);
+                // document.getElementById('dominios').innerHTML = pronoun[i] + adj[j] + noun[k] + exten[l]; 
+            }
+        }
+    }
+} 
 
-window.onload = () => { 
-  document.getElementById('excuse').innerHTML = generarExcusa(); 
-};
